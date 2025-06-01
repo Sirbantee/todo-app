@@ -7,7 +7,12 @@ function addTodo() {
   const li = document.createElement('li');
   li.textContent = input.value;
 
-  li.onclick = () => li.remove(); // remove item when clicked
+ const btn = document.createElement('button');
+btn.textContent = '❌';
+btn.onclick = () => li.remove();
+
+li.appendChild(btn);
+
 
   list.appendChild(li);
   input.value = '';
